@@ -3,8 +3,8 @@ variable "ecs_cluster" {
     default = "ecs_cluster"
 }
 
-variable "ecs_servce" {
-    default = "ecs_servce"
+variable "ecs_service" {
+    default = "ecs_service"
 }
 
 variable "taskdefinition_family" {

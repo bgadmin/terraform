@@ -11,14 +11,18 @@ variable "taskdefinition_family" {
     default = "family"
 }
 
-variable "az-1" {
+variable "az_1" {
     default = "us-west-2a"
 }
 
-variable "az-2" {
+variable "az_2" {
     default = "us-west-2b"
 }
 
 variable "desired_count" {
     default = "3"
+}
+
+variable "lb_policy" {
+    default = "lb_policy"
 }

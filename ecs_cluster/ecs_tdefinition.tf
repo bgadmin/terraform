@@ -1,6 +1,6 @@
 resource "aws_ecs_task_definition" "ecs_service" {
   family                = "${var.ecs_service}"
-  container_definitions = "${file("task_definitions.json")}"
+  container_definitions = "${file("files/task_definitions.json")}"
 
   volume {
     name      = "service-storage"
@@ -9,6 +9,6 @@ resource "aws_ecs_task_definition" "ecs_service" {
 
   placement_constraints {
     type       = "memberOf"
-    expression = "attribute:ecs.availability-zone in [${var.az-1},${var.az-2}]"
+    expression = "attribute:ecs.availability-zone in [${var.az_1},${var.az_2}]"
   }
 }
